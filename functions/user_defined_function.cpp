@@ -10,9 +10,10 @@ int main()
 {
     std::cout << "Starting main()\n";
 
-    doPrint(); // Interrupt main() function by making a function call to doPrint(), main () is the caller
+    doPrint(); // doPrint called for the first time
+    doPrint(); // doPrint called for the second time
 
-    std::cout << "Ending main()\n"; // this statement ins executed after doPrint() ends
+    std::cout << "Ending main()\n"; // This statement ins executed after doPrint() ends
 
     return 0;
 }
