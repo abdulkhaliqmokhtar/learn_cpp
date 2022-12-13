@@ -9,7 +9,6 @@
 */ 
 int getValueFromUser() // use int to return a value instead of void
 {
-    std::cout << "Enter an integer: ";
     int userValue{};
     std::cin >> userValue;
 
@@ -18,9 +17,13 @@ int getValueFromUser() // use int to return a value instead of void
 
 int main()
 {
-    int num {getValueFromUser()}; // initialize num with the return value of getValueFromUser()
+    std::cout << "Enter your first integer: ";
+    int firstNumber{getValueFromUser()};    // initialize firstNumber with the return value of getValueFromUser()
+    
+    std::cout << "Enter your second integer: ";
+    int secondNumber {getValueFromUser()};  // initialize secondNumber with the return value of getValueFromUser()
 
-    std::cout << num << " doubled is: " << num * 2 << '\n';
+    std::cout << firstNumber << " + " << secondNumber << " = " << firstNumber + secondNumber << '\n';
 
     return 0; // status code or exit code (sometimes) or return code (rare)
 }
