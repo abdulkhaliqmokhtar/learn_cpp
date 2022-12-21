@@ -1,6 +1,6 @@
 #include <iostream>
 
-// 
+// we want the input value from user in getValueFromUser function; thus the int function
 int getValueFromUser()
 {
     std::cout << "Enter an integer: ";
