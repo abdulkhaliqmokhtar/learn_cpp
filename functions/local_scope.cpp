@@ -12,6 +12,7 @@ int add(int x, int y) // function parameters x and y are local variables that ar
     ----------------------------------------------------------------------
 */
 
+// a is not in scope anywhere in this function
 void doSomething()
 {
     std::cout << "Hello!\n";
@@ -19,9 +20,11 @@ void doSomething()
 
 int main()
 {
-    int a{ 0 }; // a's lifetime begins here
+    // a cannot be used here because it's not in scope yet
+
+    int a{ 0 }; // a's lifetime and scope begins here and can now be used within this function
 
     doSomething(); // variable a is still alive during this function call
 
     return 0;
-} // a's lifetime ends here
+} // a's lifetime ends and goes out of scope here and can no longer be used
